@@ -71,10 +71,8 @@ header {
 }
 
 #navWrap {
-    position:absolute;
-    top:90px;
-    right:0;
-    
+    float:right;
+    margin-top:90px;
 }
 .gnb {}
 .gnb li {
