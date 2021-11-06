@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
 /* reset */
@@ -13,11 +14,12 @@ figure, a, span, strong, em, b, i, address {
 }
 html {
     font-size:0.625em;
-    color:#191919;
+    color:#04131C;
 }
 body, h1, h2, h3, h4, h5, h6, button {
-    font-family:'Oswald', 'NanumSquareOTF', '돋움', dotum, sans-serif;
+    font-family:'Open Sans', 'NanumSquareOTF', '돋움', dotum, sans-serif;
     line-height:1;
+    font-weight:600;
 }
 ul, ol, li {list-style:none;} 
 a {text-decoration:none;}
@@ -54,17 +56,18 @@ button {
 
 #wrap {}
 header {
+    position:relative;
     width:100%;
     background-color:#F2F2F2;
 }
 .headerInner {
-    max-width:1300px;
     height:150px;
-    margin:0 auto;
 }
 .headerInner h1 {
-    text-indent:-9999px;
-    overflow:hidden;
+    float:left;
+	margin-top:70px;
+    margin-left:150px;
+    width:177px;
 }
 .headerInner h1 img {
     width:100%;
@@ -72,15 +75,16 @@ header {
 
 #navWrap {
     float:right;
-    margin-top:90px;
+    margin-top:83px;
+    margin-right:150px;
 }
 .gnb {}
 .gnb li {
     display:inline;
-    margin-left:103px;
+    margin-left:54px;
 }
 .gnb li a {
-    font-size:2.8rem;
+    font-size:2.4rem;
     font-weight:600;
     color:#04131C;
 }
@@ -92,43 +96,37 @@ header {
     background-color:#F2F2F2;
 }
 .visualInner {
-    width:1300px;
+    width:100%;
     height:948px;
-    margin:0 auto;
+    padding-left:150px;
 }
 .img_wrap {
-    padding-top:158px;
+    padding-top:150px;
 }
 .img_wrap h2 {
     position:relative;
+    font-family:'Oswald', 'NanumSquareOTF', '돋움', dotum, sans-serif;
     font-size:8rem;
-    line-height:1.3;
+    line-height:108px;
+    margin-bottom:192px;
 }
 .img_wrap .under {
     position:absolute;
-    top:470px;
-    left:290px;
+    top:580px;
+    left:570px;
     content:"";
-    width:405px;
-    height:45px;
+    width:450px;
+    height:40px;
     display:block;
     background-color:#79E202;
 }
 .img_wrap h2:after {
     position:absolute;
-    top:95px;
-    left:675px;
+    top:205px;
+    left:885px;
     content:"*";
     display:block;
     font-size:8rem;
-}
-.img_wrap h2 span {display:block;}
-.img_wrap p {
-    font-family:'NanumSquareOTF', '돋움', dotum, sans-serif;
-    font-size:2rem;
-    line-height:2;
-    margin:38px 0 101px;
-    width:588px;
 }
 
 .sns {}
@@ -142,29 +140,59 @@ header {
 /* matinContents - pc */
 
 #mainContents {
-    width:1300px;
-    margin:0 auto;
+    width:100%;
+    
 }
 #award {
-    height:160px;
+    position:relative;
+    width:1300px;
+    padding:45px 0;
+    margin:0 auto;
+}
+
+#award h2 {
+    float:left;
+    font-size:2.8rem;
+    font-weight:700;
+    line-height:38px;
+    margin-left:80px;
+}
+#award h2:before {
+    position:absolute;
+    top:70px;
+    left:0;
+    content:"*";
+    display:block;
+    font-family:'NanumSquareOTF', '돋움', dotum, sans-serif;
+    font-weight:700;
+    font-size:8rem;
+    color:#79E202;
 }
 .count {
-    padding:26px 180px;
+    float:right;
+    height:160px;
 }
 .count .num {
+    font-family:'Oswald', 'NanumSquareOTF', '돋움', dotum, sans-serif;
     float:left;
     font-size:8rem;
-    font-weight:600;
-    margin-right:22px;
+    margin-right:20px;
 }
 .count p {
-    display:block;
     float:left;
+    display:block;
     font-size:2rem;
-    color:#5B5F60;
-    margin:22px 30px 0 0;
+    margin-top:10px;
+    margin-right:78px;
 }
 .count p:last-child {
     margin-right:0;
+}
+.count p:after {
+    content:"";
+    width:2px;
+    height:85px;
+    background-color:#04131C66;
+    
 }
 
