@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
 /* reset */
@@ -17,9 +17,9 @@ html {
     color:#04131C;
 }
 body, h1, h2, h3, h4, h5, h6, button {
-    font-family:'Open Sans', 'NanumSquareOTF', '돋움', dotum, sans-serif;
+    font-family:'Open Sans', 'NanumSquare', '돋움', dotum, sans-serif;
     line-height:1;
-    font-weight:600;
+    font-weight:700;
 }
 ul, ol, li {list-style:none;} 
 a {text-decoration:none;}
@@ -56,18 +56,20 @@ button {
 
 #wrap {}
 header {
-    position:relative;
+    position:absolute;
+    top:0;
+    left:0;
     width:100%;
-    background-color:#F2F2F2;
 }
 .headerInner {
+    max-width:1170px;
     height:150px;
+    margin:0 auto;
 }
 .headerInner h1 {
     float:left;
-	margin-top:70px;
-    margin-left:150px;
-    width:177px;
+	margin-top:90px;
+    width:128px;
 }
 .headerInner h1 img {
     width:100%;
@@ -75,16 +77,15 @@ header {
 
 #navWrap {
     float:right;
-    margin-top:83px;
-    margin-right:150px;
+    margin-top:92px;
 }
 .gnb {}
 .gnb li {
     display:inline;
-    margin-left:54px;
+    margin-left:25px;
 }
 .gnb li a {
-    font-size:2.4rem;
+    font-size:2rem;
     font-weight:600;
     color:#04131C;
 }
@@ -94,39 +95,42 @@ header {
 
 #visual {
     background-color:#F2F2F2;
+    height:1103px;
+    background:url(../img/bg_main01.png) no-repeat center/cover;
 }
-.visualInner {
-    width:100%;
-    height:948px;
-    padding-left:150px;
+
+.text_wrap {
+    max-width:1170px;
+    margin:0 auto;
 }
-.img_wrap {
-    padding-top:150px;
-}
-.img_wrap h2 {
+.text_wrap h2 {
     position:relative;
-    font-family:'Oswald', 'NanumSquareOTF', '돋움', dotum, sans-serif;
-    font-size:8rem;
-    line-height:108px;
-    margin-bottom:192px;
+    font-family:'Oswald', 'NanumSquare', '돋움', dotum, sans-serif;
+    font-size:6rem;
+    line-height:80px;
+    margin-bottom:266px;
+    padding-top:340px;
 }
-.img_wrap .under {
+.text_wrap h2:before{
     position:absolute;
-    top:580px;
-    left:570px;
+    top:545px;
+    left:318px;
     content:"";
-    width:450px;
-    height:40px;
+    width:330px;
+    height:30px;
     display:block;
     background-color:#79E202;
+    z-index:-1;
 }
-.img_wrap h2:after {
+.text_wrap h2:after {
     position:absolute;
-    top:205px;
-    left:885px;
+    top:484px;
+    left:645px;
     content:"*";
     display:block;
-    font-size:8rem;
+    font-family:'NanumSquare', '돋움', dotum, sans-serif;
+    font-weight:800;
+    font-size:5.6rem;
 }
 
 .sns {}
@@ -139,51 +143,59 @@ header {
 
 /* matinContents - pc */
 
-#mainContents {
-    width:100%;
-    
-}
+#mainContents {}
+
+/* award - pc */
+
 #award {
-    position:relative;
-    width:1300px;
-    padding:45px 0;
+    max-width:1170px;
     margin:0 auto;
+    position:relative;
+    height:160px;
+    padding-top:49px;
 }
 
 #award h2 {
-    float:left;
-    font-size:2.8rem;
-    font-weight:700;
-    line-height:38px;
-    margin-left:80px;
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    font-size:2.4rem;
+    font-weight:800;
+    line-height:33px;
+    margin-left:69px;
 }
 #award h2:before {
     position:absolute;
-    top:70px;
-    left:0;
+    top:50%;
+    left:-69px;
     content:"*";
     display:block;
-    font-family:'NanumSquareOTF', '돋움', dotum, sans-serif;
-    font-weight:700;
+    font-family:'NanumSquare', '돋움', dotum, sans-serif;
+    font-weight:800;
     font-size:8rem;
     color:#79E202;
 }
 .count {
-    float:right;
-    height:160px;
+    position:absolute;
+    top:50%;
+    right:0;
+    transform:translateY(-50%);
+    display: flex;
+    align-items: center;
 }
 .count .num {
-    font-family:'Oswald', 'NanumSquareOTF', '돋움', dotum, sans-serif;
     float:left;
-    font-size:8rem;
-    margin-right:20px;
+    font-family:'Oswald', 'NanumSquare', '돋움', dotum, sans-serif;
+    font-weight:800;
+    font-size:7.3rem;
+    margin-right:17px;
 }
 .count p {
     float:left;
-    display:block;
-    font-size:2rem;
-    margin-top:10px;
-    margin-right:78px;
+    font-size:1.6rem;
+    line-height:19px;
+    margin-right:65px;
 }
 .count p:last-child {
     margin-right:0;
@@ -196,3 +208,131 @@ header {
     
 }
 
+
+/* news - pc */
+
+#news {}
+.newsInner {
+    max-width:1170px;
+    margin:0 auto;
+    padding:132px 0 168px 0;
+}
+.newsInner h2 {
+    display:inline-block;
+    font-size:4rem;
+    margin-right:13px;
+    margin-bottom:19px;
+}
+.newsInner p {
+    display:inline-block;
+    font-family:'NanumSquare', '돋움', dotum, sans-serif;
+    font-size:1.4rem;
+    color:#5B5F60;
+}
+.newsInner .btn_blog {
+    float:right;
+    font-family:'NanumSquare', '돋움', dotum, sans-serif;
+    font-size:1.4rem;
+    color:#79E202;
+    text-decoration:underline;
+    margin-top:24px;
+}
+.newsInner  {}
+.newsInner ul {}
+.newsInner ul li {
+    float:left;
+    margin-right:29px;
+}
+.newsInner ul li:last-child {
+    margin-right:0;
+ }
+.newsInner ul li span {
+    display:block;
+    width:370px;
+    height:353px;
+    background:url(../img/img_news01.jpg) no-repeat center/cover;
+    margin-bottom:36px;
+    box-shadow: 0px 10px 30px #40585633;
+    text-indent:-9999px;
+    overflow:hidden;
+}
+.newsInner ul li:nth-of-type(2) span {
+    background-image:url(../img/img_news02.jpg);
+}
+
+.newsInner ul li:nth-of-type(3) span {
+    background-image:url(../img/img_news03.jpeg);
+}
+
+
+.newsInner ul li i {
+    font-family:'NanumSquare', '돋움', dotum, sans-serif;
+    font-size:1.4rem;
+    color:#79E202;
+    padding-left:23px;
+   
+}
+.newsInner ul li h3 {
+    font-family:'NanumSquare', '돋움', dotum, sans-serif;
+    padding-left:23px;
+    font-size:1.8rem;
+    line-height:27px;
+    font-weight:800;
+    margin-top:15px;
+}
+
+/* about - pc */
+#about {
+}
+.cgWrap {
+    position:relative;
+    max-width:1170px;
+    margin:0 auto;
+}
+.cgWrap article {}
+.cgWrap article h2 {
+    font-family:'Oswald', 'NanumSquare', '돋움', dotum, sans-serif;
+    font-size:6rem;
+    line-height:80px;
+    margin-bottom:120px;
+}
+.cgWrap article h2:before{
+    position:absolute;
+    top:125px;
+    left:0;
+    content:"";
+    width:400px;
+    height:30px;
+    display:block;
+    background-color:#79E202;
+    z-index:-1;
+}
+.cgWrap article p:before {
+    position:absolute;
+    top:0;
+    left:-40px;
+    content:"*";
+    display:block;
+    font-weight:800;
+    font-size:8rem;
+    color:#79E202;
+}
+.cgWrap article p {
+    position:absolute;
+    right:0;
+    top:210px;
+    font-family:'NanumSquare', '돋움', dotum, sans-serif;
+    font-size:1.8rem;
+    line-height:36px;
+    margin-bottom:120px;
+}
+
+/* strengths - pc */
+.strengths {
+    height:754px;
+    background-color:#04131C;
+    
+}
+.strengths li {
+    color:#FFF;
+}
